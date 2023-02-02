@@ -3,6 +3,9 @@ const form = document.getElementById("image-form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  document.querySelector(".msg").textContent = "";
+  document.getElementById("image").src = "";
+
   const prompt = document.getElementById("prompt").value;
   const size = document.getElementById("size").value;
 
@@ -34,16 +37,20 @@ async function generateImageRequest(prompt, size) {
     const data = await response.json();
     removeSpinner();
 
-    console.log(data);
+    const imageUrl = data.image_url;
+
+    document.getElementById("image").src = imageUrl;
   } catch (error) {
     document.querySelector(".msg").textContent = error;
   }
 }
 
+// Show Spinner
 function showSpinner() {
   document.querySelector(".spinner").classList.add("show");
 }
 
+// Hide Spinner
 function removeSpinner() {
   document.querySelector(".spinner").classList.remove("show");
 }
