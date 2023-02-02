@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+
+    <script src="js/main.js" defer></script>
     <title>AI Image Generator</title>
   </head>
   <body>
@@ -13,7 +16,7 @@
         <h1>AI Image Generator</h1>
       </header>
       <main class="main">
-        <form action="">
+        <form id="image-form">
           <div class="form-field">
             <label for="name">Describe an image</label>
             <input
@@ -45,6 +48,6 @@
       <img src="" alt="" id="image" />
     </div>
 
-    <div class="spinner"></div>
+    <div class="loader"></div>
   </body>
 </html>
