@@ -5,6 +5,10 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Body Parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Serve static file
 app.use(express.static(path.join(__dirname, "public")));
 
