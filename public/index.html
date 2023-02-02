@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>AI Image Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>AI Image Generator</h1>
+      </header>
+      <main class="main">
+        <form action="">
+          <div class="form-field">
+            <label for="name">Describe an image</label>
+            <input
+              type="text"
+              name="text"
+              class="form-control"
+              id="prompt"
+              placeholder="Enter text"
+              required
+            />
+          </div>
+
+          <!-- size -->
+          <div class="form-field">
+            <label for="size">Choose size</label>
+            <select name="size" id="size" class="form-control">
+              <option value="small">Small</option>
+              <option value="medium" selected>Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <button class="btn">Generate</button>
+        </form>
+      </main>
+    </div>
+
+    <div class="img-container">
+      <h2 class="msg"></h2>
+      <img src="" alt="" id="image" />
+    </div>
+
+    <div class="spinner"></div>
+  </body>
+</html>
