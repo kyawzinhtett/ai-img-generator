@@ -70,15 +70,15 @@ body {
 .img-container {
     width: 100%;
     margin-top: 2rem;
-  }
-  
-  img {
+}
+
+img {
     display: block;
     margin: auto;
-  }
-  
-  .msg {
+}
+
+.msg {
     font-size: 1.6rem;
     text-align: center;
     margin-top: 1rem;
-  }
+}
